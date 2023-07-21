@@ -7,6 +7,9 @@
 * Fuel Efficiency Reports
 * Vehicle Expense Reports
 
+
+[![Docker Compose Test](https://github.com/tosin2013/Fleetco/actions/workflows/fleetcpo-test.yaml/badge.svg)](https://github.com/tosin2013/Fleetco/actions/workflows/fleetcpo-test.yaml)
+
 ## System requirements:
 * Web Hosting (XAMPP/WAMP can also be used)
 * PHP 4.2
