@@ -1,4 +1,4 @@
-#Features
+# Features
 * Fueling Record Maintenance
 * Repair Record Maintenance
 * Maintenance Record Maintenance
@@ -7,14 +7,28 @@
 * Fuel Efficiency Reports
 * Vehicle Expense Reports
 
-##System requirements:
+## System requirements:
 * Web Hosting (XAMPP/WAMP can also be used)
 * PHP 4.2
 * MySQL Database
 * GPLv3 license
 
+## Docker build
+```
+cd Fleetco/
+cp sample.env .env
+// modify sample.env as needed
+docker compose up -d
+// visit localhost
+```
 
-##How to install
+### Docker Build Endpoints 
+* http://localhost/login.php - Fleetco
+* http://localhost:8080/ - PHPMyAdmin
+
+
+
+## How to install Manually 
 1. Unzip the file
 2. Upload the file to the hosting root ot folder 
 3. Create a MySQL database using phpmyadmin or otherwise

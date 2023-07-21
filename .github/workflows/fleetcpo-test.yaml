@@ -1,0 +1,30 @@
+name: Docker Compose Test
+
+on:
+  push:
+    branches:
+      - main  # Adjust the branch name if needed
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Set up Docker Compose
+        run: |
+          sudo apt-get update
+          sudo apt-get -y install docker-compose
+          docker-compose --version
+          cp sample.env .env
+
+      - name: Build and run Docker Compose services
+        run: docker-compose -f docker-compose.yml up -d
+
+      - name: Wait for services to start
+        run: sleep 10  # You may need to adjust this depending on your services
+
+      - name: Tear down Docker Compose services
+        run: docker-compose -f docker-compose.yml down
