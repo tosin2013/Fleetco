@@ -52,6 +52,14 @@ Find "ConnectionManager.php" in connections folder and on line 254-258 find belo
 		$data["connInfo"][3] = "database_port_number";
 		$data["connInfo"][4] = "database_name";
 
+For Docker Deployments:
+
+		$data["connInfo"][0] = "database"; // "database_host_name";
+		$data["connInfo"][1] = "docker"; // "database_user_name";
+		$data["connInfo"][2] = "docker"; //"database_user_password";
+		$data["connInfo"][3] = "3306";
+		$data["connInfo"][4] =  "docker"; //"database_name";
+  
 Update your database connectivity details above
 
 6. Then visit the url and the login screen should appear
